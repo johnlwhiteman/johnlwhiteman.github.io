@@ -1,0 +1,10 @@
+[data-md-color-scheme="saltlick"] {
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: #FFFFFF;
+  --md-primary-bg-color--dark: #FFFFFF;
+  --md-default-bg-color--lightest: #FFFFFF;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #000000;
+  --md-default-fg-color--lightest: #000000;
+}
