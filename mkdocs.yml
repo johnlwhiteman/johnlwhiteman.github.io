@@ -22,6 +22,30 @@ markdown_extensions:
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
 nav:
     - home: index.md
+    - certifications:
+      - oswp:
+        - attacks:
+          - wep:
+            - arp-request-replay: certifications/oswp/attacks/wep/arp-request-replay.md
+            - bypassing-wep-shared-key-auth: certifications/oswp/attacks/wep/bypassing-wep-shared-key-auth.md
+            - deauthentication: certifications/oswp/attacks/wep/deauthentication.md
+            - fake-authentication: certifications/oswp/attacks/wep/fake-authentication.md
+            - fragmentation: certifications/oswp/attacks/wep/fragmentation.md
+            - interactive-packet-replay: certifications/oswp/attacks/wep/interactive-packet-replay.md
+            - korek-chopchop: certifications/oswp/attacks/wep/korek-chopchop.md
+          - wpa:
+            - aircrack-ng-crack: certifications/oswp/attacks/wpa/aircrack-ng.md
+            - cowpatty-crack: certifications/oswp/attacks/wpa/cowpatty.md
+            - john-the-ripper-crack: certifications/oswp/attacks/wpa/john-the-ripper.md
+            - pyrit-crack: certifications/oswp/attacks/wpa/pyrit.md
+        - equipment: certifications/oswp/equipment.md
+        - tools:
+          - airmon-ng: certifications/oswp/tools/airmon-ng.md
+          - airodump-ng: certifications/oswp/tools/airodump-ng.md
+          - aircrack-ng: certifications/oswp/tools/aircrack-ng.md
+          - ip: certifications/oswp/tools/ip.md
+          - iw: certifications/oswp/tools/iw.md
+          - kismet: certifications/oswp/tools/kismet.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md
@@ -29,15 +53,6 @@ nav:
       - markdown: doctools/markdown/markdown.md
       - mkdocs: doctools/mkdocs/mkdocs.md
       - slidev: doctools/slidev/slidev.md
-    - certifications:
-      - oswp:
-        - airmon-ng: certifications/oswp/airmon-ng.md
-        - airodump-ng: certifications/oswp/airodump-ng.md
-        - aircrack-ng: certifications/oswp/aircrack-ng.md
-        - cheatsheet: certifications/oswp/cheatsheet.md
-        - equipment: certifications/oswp/equipment.md
-        - kismet: certifications/oswp/kismet.md
-
     - linux:
       - screen: linux/screen.md
     - about: about.md
