@@ -1,7 +1,9 @@
 site_name: John L. Whiteman
 theme:
   name: material
+  custom_dir: overrides
   features:
+    - content.code.copy
     - search.suggest
     - search.highlight
   font:
@@ -27,9 +29,17 @@ nav:
       - markdown: doctools/markdown/markdown.md
       - mkdocs: doctools/mkdocs/mkdocs.md
       - slidev: doctools/slidev/slidev.md
-    - oswp:
-        - cheatsheet: oswp/cheatsheet.md
-        - equipment: oswp/equipment.md
+    - certifications:
+      - oswp:
+        - airmon-ng: certifications/oswp/airmon-ng.md
+        - airodump-ng: certifications/oswp/airodump-ng.md
+        - aircrack-ng: certifications/oswp/aircrack-ng.md
+        - cheatsheet: certifications/oswp/cheatsheet.md
+        - equipment: certifications/oswp/equipment.md
+        - kismet: certifications/oswp/kismet.md
+
+    - linux:
+      - screen: linux/screen.md
     - about: about.md
 plugins:
   - charts
