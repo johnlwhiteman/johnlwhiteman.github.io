@@ -58,6 +58,7 @@ nav:
     - about: about.md
 plugins:
   - charts
+  - drawio-exporter
   - kroki
   - mermaid2
   - search

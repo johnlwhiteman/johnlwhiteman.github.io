@@ -91,7 +91,10 @@ mkdocs build
 * [GitHub Pages](https://squidfunk.github.io/mkdocs-material/getting-started/)
 * [Website](https://www.mkdocs.org/)
 * [Best of mkdocs](https://github.com/mkdocs/best-of-mkdocs)
+* [Plugins for MkDocs](https://www.neoteroi.dev/mkdocs-plugins/)
 * [Mermaid2](https://github.com/fralau/mkdocs-mermaid2-plugin)
 * [Drawio](https://github.com/LukeCarrier/mkdocs-drawio-exporter)
 * [Charts](https://github.com/timvink/mkdocs-charts-plugin)
 * [Vega-Lite Editor](https://vega.github.io/editor/#/)
+* [Drawio Desktop](https://github.com/jgraph/drawio-desktop)
+

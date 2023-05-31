@@ -5,3 +5,5 @@
 #### This is four
 
 * This is where my equipment note go!
+
+![Please work](images/setup.drawio)
