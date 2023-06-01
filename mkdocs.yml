@@ -25,7 +25,6 @@ nav:
     - certifications:
       - oswp:
         - attacks:
-
           - cracking:
             - aircrack-ng: certifications/oswp/attacks/cracking/aircrack-ng.md
             - aircrack-ng-with-john-the-ripper: certifications/oswp/attacks/cracking/aircrack-ng-with-john-the-ripper.md
@@ -58,7 +57,6 @@ nav:
     - about: about.md
 plugins:
   - charts
-  - drawio-exporter
   - kroki
   - mermaid2
   - search
