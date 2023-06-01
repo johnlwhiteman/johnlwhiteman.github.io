@@ -43,6 +43,7 @@ nav:
           - airmon-ng: certifications/oswp/tools/airmon-ng.md
           - airodump-ng: certifications/oswp/tools/airodump-ng.md
           - aircrack-ng: certifications/oswp/tools/aircrack-ng.md
+          - airdecap-ng: certifications/oswp/tools/airdecap-ng.md
           - ip: certifications/oswp/tools/ip.md
           - iw: certifications/oswp/tools/iw.md
           - kismet: certifications/oswp/tools/kismet.md

@@ -21,6 +21,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+      - run: pip install mkdocs-drawio-exporter
       - run: pip install mkdocs-material
       - run: pip install mkdocs-mermaid2-plugin
       - run: pip install mkdocs-charts-plugin
