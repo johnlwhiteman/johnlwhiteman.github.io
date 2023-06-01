@@ -26,5 +26,5 @@ jobs:
       - run: pip install mkdocs-mermaid2-plugin
       - run: pip install mkdocs-charts-plugin
       - run: pip install mkdocs-kroki-plugin
-      - run: cd /tmp && curl -O -L https://github.com/jgraph/drawio-desktop/releases/download/v21.2.8/drawio-amd64-21.2.8.deb && sudo dpkg -i drawio-amd64-21.2.8.deb
+      - run: sudo apt-get install libnotify4 && cd /tmp && curl -O -L https://github.com/jgraph/drawio-desktop/releases/download/v21.2.8/drawio-amd64-21.2.8.deb && sudo dpkg -i drawio-amd64-21.2.8.deb
       - run: mkdocs gh-deploy --force
