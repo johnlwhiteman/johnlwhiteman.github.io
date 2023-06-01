@@ -25,6 +25,12 @@ nav:
     - certifications:
       - oswp:
         - attacks:
+
+          - cracking:
+            - aircrack-ng: certifications/oswp/attacks/cracking/aircrack-ng.md
+            - aircrack-ng-with-john-the-ripper: certifications/oswp/attacks/cracking/aircrack-ng-with-john-the-ripper.md
+            - cowpatty: certifications/oswp/attacks/cracking/cowpatty.md
+            - pyrit: certifications/oswp/attacks/cracking/pyrit.md
           - wep:
             - arp-request-replay: certifications/oswp/attacks/wep/arp-request-replay.md
             - bypassing-wep-shared-key-auth: certifications/oswp/attacks/wep/bypassing-wep-shared-key-auth.md
@@ -33,20 +39,13 @@ nav:
             - fragmentation: certifications/oswp/attacks/wep/fragmentation.md
             - interactive-packet-replay: certifications/oswp/attacks/wep/interactive-packet-replay.md
             - korek-chopchop: certifications/oswp/attacks/wep/korek-chopchop.md
-          - wpa:
-            - aircrack-ng-crack: certifications/oswp/attacks/wpa/aircrack-ng.md
-            - cowpatty-crack: certifications/oswp/attacks/wpa/cowpatty.md
-            - john-the-ripper-crack: certifications/oswp/attacks/wpa/john-the-ripper.md
-            - pyrit-crack: certifications/oswp/attacks/wpa/pyrit.md
         - equipment: certifications/oswp/equipment.md
         - tools:
           - airmon-ng: certifications/oswp/tools/airmon-ng.md
           - airodump-ng: certifications/oswp/tools/airodump-ng.md
           - aircrack-ng: certifications/oswp/tools/aircrack-ng.md
           - airdecap-ng: certifications/oswp/tools/airdecap-ng.md
-          - ip: certifications/oswp/tools/ip.md
-          - iw: certifications/oswp/tools/iw.md
-          - kismet: certifications/oswp/tools/kismet.md
+          - if-ip-iw: certifications/oswp/tools/if-ip-iw.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md
