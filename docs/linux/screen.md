@@ -2,7 +2,7 @@
 
 ```bash
 # Start a session
-screen
+screen -S johnny
 
 # Disconnect
 ctrl+a d

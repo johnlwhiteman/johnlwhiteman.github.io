@@ -49,6 +49,7 @@ sudo tcpdump -i wlan0mon -s 65000
 
 # Set channel while wireless adapter is in monitor mode
 sudo iw dev wlan0mon set channel 3
+sudo iwconfig wlan0mon channel 3
 
 # Put wireless device back to managed mode
 sudo iw dev wlan0mon del
