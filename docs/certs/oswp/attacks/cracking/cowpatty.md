@@ -8,15 +8,14 @@ Use CoWPAtty to crack the password in either dictionary mode (plaintext) or hash
 
 ```bash
 # Install cowpatty/genpmk
-* Run `sudo apt-get install cowpatty` to install it
+sudo apt-get install cowpatty
 
 # Start monitor mode
 sudo airmon-ng start wlan0
 
-# Create and source config file as noted above
 # Start a screen session with a horizonal split screen
 
-# Restart monitoring but filtered with output saved to PCAP. Make sure CLIENT is found.
+# Start monitor mode but with filters and output saved to PCAP.
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap wlan0mon
 
 # Do one deauth injection attack while still monitoring
@@ -75,4 +74,4 @@ Usage: genpmk [options]
 After precomputing the hash file, run cowpatty with the -d argument.
 ```
 
-![fourway-handshake](images/fourway-handshake.png)
+![fourway-handshake](../../images/fourway-handshake.png)

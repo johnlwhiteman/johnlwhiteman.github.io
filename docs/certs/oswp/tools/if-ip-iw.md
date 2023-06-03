@@ -1,6 +1,6 @@
 # IF/IP/IW Commands
 
-This page contains a collection of networking commands. Note that iwconfig is deprecated but still usable at your own risk.
+This page contains a collection of networking commands. Try to avoid using `iwconfig` since it is considered deprecated.
 
 ## IF/IP/IW Commands
 
@@ -59,6 +59,11 @@ sudo iwconfig wlan0 mode managed
 # Delete VAP interface
 # Warning: Sometimes things go wrong, require reboot
 sudo iw dev wlan0mon interface del
+
+# Assign an IP address to a wireless interface
+sudo ip link set wlan0 down
+sudo ip addr add 192.168.123.1/24 dev wlan0
+sudo ip link set wlan0 up
 ```
 
 ## References
