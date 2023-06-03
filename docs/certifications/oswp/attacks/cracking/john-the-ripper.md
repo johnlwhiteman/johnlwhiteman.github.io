@@ -6,10 +6,10 @@ Use this tool to crack WPA/WPA2 passwords with aircrack-ng
 
 ```bash
 # Pipe john's generated passwords to aircrack-ng
-john --wordlist=\usr\share\john\password.lst --rules --stdout | aircrack-ng -e $SSID $PCAP -w -
+john --wordlist=$WORDLIST --rules --stdout | aircrack-ng -e $SSID $PCAP -w -
 ```
 
-## Configuration
+## Customize Rules
 
 We can create additional test cases by editing existing rules.
 

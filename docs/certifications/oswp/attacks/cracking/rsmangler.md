@@ -3,7 +3,7 @@
 Use this tool to crack WPA/WPA2 passwords with aircrack-ng
 
 ```bash
-# Create a directed wordlist
+# Create a custom wordlist
 echo 'donkey' > wordlist.txt
 echo 'burro' >> wordlist.txt
 echo 'mule' >> wordlist.txt

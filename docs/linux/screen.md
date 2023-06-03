@@ -35,4 +35,8 @@ ctrl+a p
 
 # Unsplit window
 ctrl+a Q
+
+# Exit
+ctrl+c
+pkill screen
 ```

