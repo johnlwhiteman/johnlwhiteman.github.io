@@ -1,15 +1,17 @@
 # airmon-ng
 
+Used to enable monitor mode on wireless interfaces. It may also be used to kill network managers, or go back from monitor mode to managed mode. Entering the airmon-ng command without parameters will show the interfaces status.
+
 ## Commands
 
 ```bash
-# Check status and/or listing wireless interfaces
+# List the available interfaces
 sudo airmon-ng
 
-# Check for processes that might interfere
+# List programs that could interfere with aircrack tools
 sudo airmon-ng check
 
-# Check and kill processes that might interfere
+# Kill the programs that could interfere with aircrack tools
 sudo airmon-ng check kill
 
 # Start interface in monitor mode
@@ -18,16 +20,23 @@ sudo airmon-ng start wlan0
 # Start interface in monitor mode and channel is set
 sudo airmon-ng start wlan0 3
 
-# Check if interface in monitor mode and channel is set
-iw dev wlan0mon info
+# Set interface to a specific channel even if running
+sudo iw dev wlan0 set channel 13
+
+# Verify that channel is set correctly
+sudo iw dev wlan0mon info
 iwconfig wlan0mon
 
-# Remove the interface in monitor mode
+# Stop monitor mode on the given interface
 sudo airmon-ng stop wlan0mon
+
+# Run in debug mode
+sudo airmon-ng --debug
+
+# Run in verbose mode
+sudo airmon-ng --verbose
 ```
 
 ## References
 
 * [Airmon-ng](https://www.aircrack-ng.org/doku.php?id=airmon-ng)
-
-

@@ -55,6 +55,7 @@ nav:
       - mkdocs: doctools/mkdocs/mkdocs.md
       - slidev: doctools/slidev/slidev.md
     - linux:
+      - bg-fg-jobs: linux/bg-fg-jobs.md
       - screen: linux/screen.md
     - about: about.md
 plugins:

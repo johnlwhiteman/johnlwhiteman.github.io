@@ -2,6 +2,8 @@
 
 Decrypts WEP/WPA/WPA2 capture files and can be used to strip the wireless headers from an unencrypted wireless capture.
 
+Decrypts a WEP/WPA pcap file to a plaintext one by using the right WEP/WPA keys. It can also filter for a specific BBSID.
+
 ## Commands
 
 ```bash
