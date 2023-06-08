@@ -18,10 +18,10 @@ sudo airmon-ng check kill
 sudo airmon-ng start wlan0
 
 # Start interface in monitor mode and channel is set
-sudo airmon-ng start wlan0 3
+sudo airmon-ng start wlan0 $CHANNEL
 
 # Set interface to a specific channel even if running
-sudo iw dev wlan0 set channel 13
+sudo iw dev wlan0 set channel $CHANNEL
 
 # Verify that channel is set correctly
 sudo iw dev wlan0mon info

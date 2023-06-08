@@ -44,7 +44,6 @@ wget -r -l2 https://www.megacorpone.com
 
 sudo ip addr add 192.168.87.1/24 dev wlan0
 sudo ip link set wlan0 up
-
 ```
 
 

@@ -1,4 +1,0 @@
-# OSWP - References
-
-## Cheatsheets
-
