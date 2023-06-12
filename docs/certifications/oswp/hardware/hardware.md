@@ -2,7 +2,7 @@
 
 ## Setup
 
-The OSWP course does not provide a lab environment except for the exam. Here is what is can be used to build a home lab.:
+The OSWP course does not provide a lab environment except for the exam. Here is one suggested do-it-yourself lab environment:
 
 * VMware image of Kali Linux
 * Access point (AP) that supports WEP/WPA/WPA2
@@ -10,16 +10,17 @@ The OSWP course does not provide a lab environment except for the exam. Here is 
 * One or two wireless adapters that support monitor mode
 * Any client with Wi-Fi capabilities
 
-![](images/hardware.png)
+![](../images/hardware.png)
 
 * Note that the green stress ball is optional
 
-![](images/hardware-equipment.png)
-
+![](../images/hardware-equipment.png)
 
 ## Access Points
 
 Finding a router with WEP capabilities is not easy these days and that is a good thing. Even old and used routers have updated firmware/software that lacks the WEP capability. It doesn't appear the new exam tests for WEP but not 100% sure. It's good to learn how to either way.
+
+***Note: Check for old ISP routers to save money if still around at home. Most support WEP/WPA/WPA2.***
 
 ### TP-Link AC750 (TL-WR902AC)
 
@@ -32,45 +33,45 @@ Best one. It's modern and still offers WEP/WPA/WPA2/WPA3 capabilities out of the
 | Specs     | IEEE 802.11n/b/g 2.4 GHz, IEEE 802.11ac/n/a 5 GHz                                                                                    |
 | Power     | 20-23 dBm                                                                                                                            |
 | SSIDs     | TP-Link_18-E1, TP-Link_18E1_5G                                                                                                       |
-| CREDS     | admin:admin                                                                                                                          |
 | IP        | http://192.168.0.1 / http://tplinkwifi.net                                                                                           |
 | Security  | WEP/WPA/WPA2                                                                                                                         |
 | HVIN      | HVIN:TL-WR902AC V3                                                                                                                   |
 
-![TL-WR902AC AC750 Wireless Travel Router](./images/tp-link-tl-wr902ac-ac750-nano-router.png)
+![TL-WR902AC AC750 Wireless Travel Router](../images/tp-link-tl-wr902ac-ac750-nano-router.png)
 
 #### Configuration
 
-* Connect to the AP using the PIN credentials found on the device via your computer's wi-fi
+* Connect to the AP using the PIN credentials found on the device via your computer's Wi-Fi
 * Open a browser and navigate to [http://192.168.0.1](http://192.168.0.1) via a browser
+* Change SSID to `wifu` under `Wireless 2.4Ghz -> Basic Settings -> Wireless Network Name`
 * Disable WPS (You will need to do this or the choose  WEP option will not appear)
   * Go to `Wireless 2.4 GHz -> WPS`
   * Click on the `Disable` button
 
-![images](images/tp-link-tl-wr902ac-disable-wps.png)
+![images](../images/tp-link-tl-wr902ac-disable-wps.png)
 
   * Wait for the router to reboot. It will happen automatically without a prompt. You may need to reconnect/reauthenticate with the PIN if you did not select `Connect automatically`
 * Verify that WPS is disabled
 
-![images](images/tp-link-tl-wr902ac-disable-wps-confirmed.png)
+![images](../images/tp-link-tl-wr902ac-disable-wps-confirmed.png)
 
 * Go to `Wireless 2.4GHz -> Wireless Security`
 * Select the `WEP` option
 
-![images](images/tp-link-tl-wr902ac-wep.png)
+![images](../images/tp-link-tl-wr902ac-wep.png)
 
 * Set WEP key  accordingly
-  * 64-bit: Enter 10 hexadecimal digits (any combination of 0-9, a-f, A-F, zero key is not permitted) or 5 ASCII characters.
+  * 64-bit: Enter 10 hexadecimal digits (any combination of 0-9, a-f, A-F, zero key is not permitted) or 5 ASCII characters, e.g., `aabbccddee` or `pizza`
   * 128-bit: Enter 26 hexadecimal digits (any combination of 0-9, a-f, A-F, zero key is not permitted) or 13 ASCII characters.
   * 152-bit: Enter 32 hexadecimal digits (any combination of 0-9, a-f, A-F, zero key is not permitted) or 16 ASCII characters.
 
-![images](images/tp-link-tl-wr902ac-wep-key.png)
+![images](../images/tp-link-tl-wr902ac-wep-key.png)
 
 ## Wireless Adapters
 
 ### ALFA AWUS036NHA
 
-Only one is needed but having two is nice to have for creating a secondary access point and adapter to adapter injection testing.
+Only one is needed but having two is nice to have for creating a secondary access point and for doing advanced adapter to adapter injection testing using `aireplay-ng --test ...`.
 
 | Name (A1)    | Value                                                                                        |
 |--------------|----------------------------------------------------------------------------------------------|
@@ -81,7 +82,7 @@ Only one is needed but having two is nice to have for creating a secondary acces
 | Power        | 5 dBi                                                                                        |
 | Linux Driver | [https://github.com/aircrack-ng/rtl8812au](https://github.com/aircrack-ng/rtl8812au)         |
 
-![image](images/alfa-awus03nha-wireless-adapter.png)
+![image](../images/alfa-awus03nha-wireless-adapter.png)
 
 #### Driver Installation
 
@@ -101,7 +102,8 @@ sudo make install
 
 #### Troubleshooting
 
-Sometimes the device becomes unresponsive when connected to a VM over long periods of inactivity. Unplug the device and restart the VM. The green light should start to flash blue.
+* Testing is done in a Kali Linux VM. Start the VM then connect the adapter. Wait for the prompt from the VM software asking whether to connect to the host or guest. Choose the latter. Do this for each adapter. Starting the VM with the adapter connect does not always work. Sometimes a full host reboot is required (see below) if this doesn't work.
+* Sometimes the device becomes unresponsive when connected to a VM over long periods of inactivity. Unplug the device and restart the VM. The green light should start to flash blue.
 
 ## Clients/Stations
 
@@ -119,10 +121,10 @@ A Raspberry Pi with Wi-Fi capabilities is a great client to attack when connecte
 ```bash
 cat /proc/cpuinfo
 ```
-![Raspberry Pi2 Version](images/raspberry-pi-version.png)
+![Raspberry Pi2 Version](../images/raspberry-pi-version.png)
 
 * Connect a Wi-Fi USB adapter if Wi-Fi is not already on board
 * Make note of the Wi-Fi BSSID with the `ifconfig` or `ip -a` command
 * Connect to the vulnerable AP with weak password
 
-![Raspberry Pi2](images/tp-link-raspberry-pi-2.png)
+![Raspberry Pi2](../images/tp-link-raspberry-pi-2.png)

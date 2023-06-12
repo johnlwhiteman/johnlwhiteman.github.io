@@ -24,29 +24,30 @@ nav:
     - home: index.md
     - certifications:
       - oswp:
+        - setup: certifications/oswp/setup.md
         - attacks:
           - cracking:
-            - aircrack-ng: certs/oswp/attacks/cracking/aircrack-ng.md
-            - cowpatty: certs/oswp/attacks/cracking/cowpatty.md
-            - crunch: certs/oswp/attacks/cracking/crunch.md
-            - john-the-ripper: certs/oswp/attacks/cracking/john-the-ripper.md
-            - pyrit: certs/oswp/attacks/cracking/pyrit.md
+            - aircrack-ng: certifications/oswp/attacks/cracking/aircrack-ng.md
+            - cowpatty: certifications/oswp/attacks/cracking/cowpatty.md
+            - crunch: certifications/oswp/attacks/cracking/crunch.md
+            - john-the-ripper: certifications/oswp/attacks/cracking/john-the-ripper.md
+            - pyrit: certifications/oswp/attacks/cracking/pyrit.md
           - wep:
-            - arp-request-replay: certs/oswp/attacks/wep/arp-request-replay.md
-            - bypassing-wep-shared-key-auth: certs/oswp/attacks/wep/bypassing-wep-shared-key-auth.md
-            - deauthentication: certs/oswp/attacks/wep/deauthentication.md
-            - fake-authentication: certs/oswp/attacks/wep/fake-authentication.md
-            - fragmentation: certs/oswp/attacks/wep/fragmentation.md
-            - interactive-packet-replay: certs/oswp/attacks/wep/interactive-packet-replay.md
-            - korek-chopchop: certs/oswp/attacks/wep/korek-chopchop.md
+            - arp-request-replay: certifications/oswp/attacks/wep/arp-request-replay.md
+            - bypassing-wep-shared-key-auth: certifications/oswp/attacks/wep/bypassing-wep-shared-key-auth.md
+            - deauthentication: certifications/oswp/attacks/wep/deauthentication.md
+            - fake-authentication: certifications/oswp/attacks/wep/fake-authentication.md
+            - fragmentation: certifications/oswp/attacks/wep/fragmentation.md
+            - interactive-packet-replay: certifications/oswp/attacks/wep/interactive-packet-replay.md
+            - korek-chopchop: certifications/oswp/attacks/wep/korek-chopchop.md
         - software:
-          - airmon-ng: certs/oswp/tools/airmon-ng.md
-          - airodump-ng: certs/oswp/tools/airodump-ng.md
-          - aireplay-ng: certs/oswp/tools/aireplay-ng.md
-          - aircrack-ng: certs/oswp/tools/aircrack-ng.md
-          - airdecap-ng: certs/oswp/tools/airdecap-ng.md
-          - if-ip-iw: certs/oswp/tools/if-ip-iw.md
-        - hardware: certs/oswp/hardware.md
+          - airmon-ng: certifications/oswp/software/airmon-ng.md
+          - airodump-ng: certifications/oswp/software/airodump-ng.md
+          - aireplay-ng: certifications/oswp/software/aireplay-ng.md
+          - aircrack-ng: certifications/oswp/software/aircrack-ng.md
+          - airdecap-ng: certifications/oswp/software/airdecap-ng.md
+          - if-ip-iw: certifications/oswp/software/if-ip-iw.md
+        - hardware: certifications/oswp/hardware/hardware.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md

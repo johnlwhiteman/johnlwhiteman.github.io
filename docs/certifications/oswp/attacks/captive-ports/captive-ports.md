@@ -5,7 +5,7 @@
 
 ## Commands
 
-* Run [reconnaissance](../reconnaissance.md) first
+* Run [setup](../../setup.md) first
 
 ### Capture some data
 

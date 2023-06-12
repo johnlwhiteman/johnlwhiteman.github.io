@@ -4,24 +4,26 @@ Used for capturing raw 802.11 frames. It is particularly suitable for collecting
 
 ## Commands
 
+* Run [setup](../setup.md) first
+
 ```bash
 # Capture all traffic on all channels
-airodump-ng wlan0mon
+sudo airodump-ng $INTERFACE
 
 # Capture traffic filtered by given channel/BSSID
-airodump-ng -c 3 --bssid $BSSID wlan0mon
+sudo airodump-ng -c 3 --bssid $BSSID $INTERFACE
 
 # Capture traffic filtered by given channel/BSSID and save to PCAP file
-sudo airodump-ng -c $CHANNEL --bssid $BSSID --output-format pcap -w $TAG wlan0mon
+sudo airodump-ng -c $CHANNEL --bssid $BSSID --output-format pcap -w $TAG $INTERFACE
 
 # Capture traffic filtered by given channel and ESSID
-airodump-ng -c 3 --essid $SSID wlan0mon
+sudo airodump-ng -c 3 --essid $SSID $INTERFACE
 
 # Scan 2.4/5 GHz simultaneously
-airodump-ng wlan0 --band abg
+sudo airodump-ng --band abg $INTERFACE
 
 # Load capture file in airodump-ng
-airodump-ng -r $PCAP
+sudo airodump-ng -r $PCAP
 
 # Load capture file in Wireshark
 wireshark $PCAP

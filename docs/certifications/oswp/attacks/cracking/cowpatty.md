@@ -4,7 +4,7 @@ Use CoWPAtty to crack the password in either dictionary mode (plaintext) or hash
 
 ## Commands
 
-* Run [reconnaissance](../reconnaissance.md) first
+* Run [setup](../../setup.md) first
 
 ```bash
 # Install cowpatty/genpmk

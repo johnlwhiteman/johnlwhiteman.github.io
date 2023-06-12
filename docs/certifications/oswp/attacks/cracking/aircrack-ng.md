@@ -4,7 +4,7 @@ This page shows how to crack an AP secret using just `aircrack-ng`.
 
 ## Commands
 
-* Run [reconnaissance](../reconnaissance.md) first
+* Run [setup](../../setup.md) first
 
 ```bash
 # Start monitor mode

@@ -5,6 +5,10 @@ This page contains a collection of networking commands. Try to avoid using `iwco
 ## IF/IP/IW Commands
 
 ```bash
+# Find connect wireless adapters
+ifconfig
+ip a
+
 # Get information about a wireless adapter
 iw dev
 iw dev wlan0 info
@@ -47,7 +51,7 @@ sudo iwconfig wlan0 monitor
 # Verify interface is working by injecting traffic
 sudo tcpdump -i wlan0mon -s 65000
 
-# Set channel while wireless adapter is in monitor mode
+# Set/change the channel while wireless adapter is in monitor mode
 sudo iw dev wlan0mon set channel 3
 sudo iwconfig wlan0mon channel 3
 

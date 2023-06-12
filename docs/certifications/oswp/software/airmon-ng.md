@@ -4,6 +4,8 @@ Used to enable monitor mode on wireless interfaces. It may also be used to kill 
 
 ## Commands
 
+* Run [setup](../setup.md) first
+
 ```bash
 # List the available interfaces
 sudo airmon-ng
@@ -15,20 +17,20 @@ sudo airmon-ng check
 sudo airmon-ng check kill
 
 # Start interface in monitor mode
-sudo airmon-ng start wlan0
+sudo airmon-ng start $DEVICE
 
 # Start interface in monitor mode and channel is set
-sudo airmon-ng start wlan0 $CHANNEL
+sudo airmon-ng start $DEVICE $CHANNEL
 
 # Set interface to a specific channel even if running
-sudo iw dev wlan0 set channel $CHANNEL
+sudo iw dev $DEVICE set channel $CHANNEL
 
 # Verify that channel is set correctly
-sudo iw dev wlan0mon info
-iwconfig wlan0mon
+sudo iw dev $INTERFACE info
+iwconfig $INTERFACE
 
 # Stop monitor mode on the given interface
-sudo airmon-ng stop wlan0mon
+sudo airmon-ng stop $INTERFACE
 
 # Run in debug mode
 sudo airmon-ng --debug

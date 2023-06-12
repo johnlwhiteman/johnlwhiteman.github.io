@@ -2,21 +2,23 @@
 
 ## Commands
 
+* Run [setup](../setup.md) first
+
 ```bash
 # Capture some packets
-sudo airodump-ng -a --bssid F0:2F:74:C2:5B:C0 -c 10 -w slams wlan0mon
+sudo airodump-ng -a --bssid $BSSID -c $CHANNEL -w $TAG $DEVICE
 
 # Generate a Client to AP Relationship (CAPR) graph
-airgraph-ng -o slams-capr.png -i dump-01.csv -g CAPR
+airgraph-ng -o $TAG-capr.png -i $PCAP -g CAPR
 
 # Display it
-eog slams-capr.png
+eog $TAG-capr.png
 
 # Generate a Client Probe Graph (CPG) that displays the relationship between clients and probed networks
-airgraph-ng -o slams-cpg.png -i slams-01.csv -g CPG
+airgraph-ng -o $TAG-cpg.png -i $TAG-01.csv -g CPG
 
 # Display it
-eog slams-cpg.png
+eog $TAG-cpg.png
 ```
 
 ## References

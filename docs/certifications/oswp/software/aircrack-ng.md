@@ -1,6 +1,9 @@
 # Aircrack-ng
 
 ## Commands
+
+* Run [setup](../setup.md) first
+
 ```bash
 
 # Crack the key using a wordlist

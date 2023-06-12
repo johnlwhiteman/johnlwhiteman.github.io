@@ -23,15 +23,15 @@ ctrl+a |
 # Split window horizontally
 ctrl+a S
 
-# Note: Create a new window for every new window
-ctrl+a c
-
-# Move to next window
+# Move to the next window
 ctrl+a n
 ctrl+a tab
 
-# Move to next window
+# Move to the previous window
 ctrl+a p
+
+# Create a new session window when in split mode
+ctrl+a c
 
 # Unsplit window
 ctrl+a Q
