@@ -22,7 +22,7 @@ markdown_extensions:
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
 nav:
     - home: index.md
-    - certs:
+    - certifications:
       - oswp:
         - attacks:
           - cracking:
@@ -39,14 +39,14 @@ nav:
             - fragmentation: certs/oswp/attacks/wep/fragmentation.md
             - interactive-packet-replay: certs/oswp/attacks/wep/interactive-packet-replay.md
             - korek-chopchop: certs/oswp/attacks/wep/korek-chopchop.md
-        - equipment: certs/oswp/equipment.md
-        - tools:
+        - software:
           - airmon-ng: certs/oswp/tools/airmon-ng.md
           - airodump-ng: certs/oswp/tools/airodump-ng.md
           - aireplay-ng: certs/oswp/tools/aireplay-ng.md
           - aircrack-ng: certs/oswp/tools/aircrack-ng.md
           - airdecap-ng: certs/oswp/tools/airdecap-ng.md
           - if-ip-iw: certs/oswp/tools/if-ip-iw.md
+        - hardware: certs/oswp/hardware.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md
