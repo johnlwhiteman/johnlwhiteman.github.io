@@ -33,13 +33,15 @@ nav:
             - john-the-ripper: certifications/oswp/attacks/cracking/john-the-ripper.md
             - pyrit: certifications/oswp/attacks/cracking/pyrit.md
           - wep:
-            - arp-request-replay: certifications/oswp/attacks/wep/arp-request-replay.md
-            - bypassing-wep-shared-key-auth: certifications/oswp/attacks/wep/bypassing-wep-shared-key-auth.md
-            - deauthentication: certifications/oswp/attacks/wep/deauthentication.md
-            - fake-authentication: certifications/oswp/attacks/wep/fake-authentication.md
-            - fragmentation: certifications/oswp/attacks/wep/fragmentation.md
-            - interactive-packet-replay: certifications/oswp/attacks/wep/interactive-packet-replay.md
-            - korek-chopchop: certifications/oswp/attacks/wep/korek-chopchop.md
+            - 0-deauth: certifications/oswp/attacks/wep/00-deauth.md
+            - 1-fakeauth: certifications/oswp/attacks/wep/01-fakeauth.md
+            - 1-fakeauthkey: certifications/oswp/attacks/wep/01-fakeauthkey.md
+            - 2-interactive: certifications/oswp/attacks/wep/02-interactive.md
+            - 3-arpreplay: certifications/oswp/attacks/wep/03-arpreplay.md
+            - 4-chopchop: certifications/oswp/attacks/wep/04-chopchop.md
+            - 5-fragment: certifications/oswp/attacks/wep/05-fragment.md
+            - 6-caffelatte: certifications/oswp/attacks/wep/06-caffelatte.md
+            - 9-test: certifications/oswp/attacks/wep/09-test.md
         - software:
           - airmon-ng: certifications/oswp/software/airmon-ng.md
           - airodump-ng: certifications/oswp/software/airodump-ng.md

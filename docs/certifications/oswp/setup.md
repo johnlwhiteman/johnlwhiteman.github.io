@@ -13,14 +13,14 @@ sudo airmon-ng check kill
 ifconfig
 ip a
 
-# Determine DEVICE name, let's assume wlan0
+# Determine the ADAPTER name, let's assume wlan0
 
 # Set to monitor mode
 sudo airmon-ng start wlan0
 
-# Determine interface's monitor mode name, let's assume wlan0mon
+# Determine INTERFACE name, let's assume wlan0mon
 
-# Start monitoring for APs
+# Start monitoring - make terminal large enough to see everything
 sudo airodump-ng wlan0mon
 
 # Do a quick injection test to ensure it works
@@ -35,16 +35,18 @@ sudo aireplay-ng --test -i wlan1 wlan0mon
 qq
 
 # Build an environment file for convenience
-vi/nano config
+vi config
 
 export SSID=wifu
 export BSSID=AA:BB:CC:DD:EE:FF
 export CHANNEL=3
 export CLIENT=A1:B2:C3:D4:E5:F6
-export DEVICE=wlan0
+export ADAPTER=wlan0
+export ADAPTER2=wlan1
 export INTERFACE=wlan0mon
-export INTERFACE2=wlan1mon
 export INTERFACEMAC=AB:CD:EF:12:34:56
+export INTERFACE2=wlan1mon
+export INTERFACEMAC2=56:34:12:EF:CD:AB
 export TAG=$SSID
 export PCAP=$TAG-01.cap
 export RAINBOW=$TAG-rainbow.lst

