@@ -22,34 +22,36 @@ markdown_extensions:
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
 nav:
     - home: index.md
-    - certifications:
-      - oswp:
-        - setup: certifications/oswp/setup.md
-        - attacks:
-          - cracking:
-            - aircrack-ng: certifications/oswp/attacks/cracking/aircrack-ng.md
-            - cowpatty: certifications/oswp/attacks/cracking/cowpatty.md
-            - crunch: certifications/oswp/attacks/cracking/crunch.md
-            - john-the-ripper: certifications/oswp/attacks/cracking/john-the-ripper.md
-            - pyrit: certifications/oswp/attacks/cracking/pyrit.md
-          - wep:
-            - 0-deauth: certifications/oswp/attacks/wep/00-deauth.md
-            - 1-fakeauth: certifications/oswp/attacks/wep/01-fakeauth.md
-            - 1-fakeauthkey: certifications/oswp/attacks/wep/01-fakeauthkey.md
-            - 2-interactive: certifications/oswp/attacks/wep/02-interactive.md
-            - 3-arpreplay: certifications/oswp/attacks/wep/03-arpreplay.md
-            - 4-chopchop: certifications/oswp/attacks/wep/04-chopchop.md
-            - 5-fragment: certifications/oswp/attacks/wep/05-fragment.md
-            - 6-caffelatte: certifications/oswp/attacks/wep/06-caffelatte.md
-            - 9-test: certifications/oswp/attacks/wep/09-test.md
-        - software:
-          - airmon-ng: certifications/oswp/software/airmon-ng.md
-          - airodump-ng: certifications/oswp/software/airodump-ng.md
-          - aireplay-ng: certifications/oswp/software/aireplay-ng.md
-          - aircrack-ng: certifications/oswp/software/aircrack-ng.md
-          - airdecap-ng: certifications/oswp/software/airdecap-ng.md
-          - if-ip-iw: certifications/oswp/software/if-ip-iw.md
-        - hardware: certifications/oswp/hardware/hardware.md
+    - wireless:
+      - playbook: wireless/playbook.md
+      - setup: wireless/setup.md
+      - attacks:
+        - wep:
+          - 0-deauth: wireless/attacks/wep/00-deauth.md
+          - 1-fakeauth: wireless/attacks/wep/01-fakeauth.md
+          - 1-fakeauthkey: wireless/attacks/wep/01-fakeauthkey.md
+          - 2-interactive: wireless/attacks/wep/02-interactive.md
+          - 3-arpreplay: wireless/attacks/wep/03-arpreplay.md
+          - 4-chopchop: wireless/attacks/wep/04-chopchop.md
+          - 5-fragment: wireless/attacks/wep/05-fragment.md
+          - 6-caffelatte: wireless/attacks/wep/06-caffelatte.md
+          - 9-test: wireless/attacks/wep/09-test.md
+        - wpa:
+          - aircrack-ng: wireless/attacks/wpa/aircrack-ng.md
+          - cowpatty: wireless/attacks/wpa/cowpatty.md
+          - crunch: wireless/attacks/wpa/crunch.md
+          - john-the-ripper: wireless/attacks/wpa/john-the-ripper.md
+          - pyrit: wireless/attacks/wpa/pyrit.md
+      - software:
+        - airmon-ng: wireless/software/airmon-ng.md
+        - airodump-ng: wireless/software/airodump-ng.md
+        - aireplay-ng: wireless/software/aireplay-ng.md
+        - aircrack-ng: wireless/software/aircrack-ng.md
+        - airdecap-ng: wireless/software/airdecap-ng.md
+        - if-ip-iw: wireless/software/if-ip-iw.md
+      - hardware: wireless/hardware/hardware.md
+      - hidden: wireless/attacks/hidden.md
+      - ska: wireless/attacks/ska.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md
