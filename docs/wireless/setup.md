@@ -77,6 +77,9 @@ export RAINBOW=$TAG-rainbow.lst
 # Path to default wordlist used for cracking
 export WORDLIST=/usr/share/john/password.lst
 
+# Contruct the correct PRGA path name
+PRGA=$(echo "$TAG-01-$BSSID.xor" | sed 's/\:/-/'g)
+
 # Save and source it
 source config
 

