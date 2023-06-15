@@ -90,4 +90,3 @@ source config
 
 * [Airmon-ng](https://www.aircrack-ng.org/doku.php?id=airmon-ng)
 * [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
-* [REdBlueTeam](https://youtu.be/_9qJ1Urpn0Y?t=1691)

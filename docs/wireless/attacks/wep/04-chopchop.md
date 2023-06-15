@@ -57,7 +57,7 @@ Read 441431 packets.
 
    #  BSSID              ESSID                     Encryption
 
-   1  00:9F:A9:24:B9:28  wifu                      WEGot 74852 out of 70000 IVsStarting PTW attack with 74852 ivs.
+   1  AA:BB:CC:DD:EE:FF  wifu                      WEGot 74852 out of 70000 IVsStarting PTW attack with 74852 ivs.
                      KEY FOUND! [ 31:32:33:34:35 ] (ASCII: 12345 )
 ChoosingDecrypted correctly: 100%
 ```

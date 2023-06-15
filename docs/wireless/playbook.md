@@ -33,3 +33,13 @@
     * [John the Ripper](./attacks/wpa/john-the-ripper.md)
     * [Pyrit](./attacks/wpa/pyrit.md)
     * [Rsmangler](./attacks/wpa/rsmangler.md)
+
+
+## Misc
+
+### Password Lists
+```bash
+* /usr/share/wordlists
+* /usr/share/john/password.lst ($WORDLIST)
+* https://github.com/aircrack-ng/aircrack-ng/blob/master/test/password.lst
+```

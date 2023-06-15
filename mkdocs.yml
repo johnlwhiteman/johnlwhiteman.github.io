@@ -25,6 +25,7 @@ nav:
     - wireless:
       - playbook: wireless/playbook.md
       - setup: wireless/setup.md
+      - teardown: wireless/teardown.md
       - attacks:
         - wep:
           - 0-deauth: wireless/attacks/wep/00-deauth.md
@@ -34,21 +35,24 @@ nav:
           - 3-arpreplay: wireless/attacks/wep/03-arpreplay.md
           - 4-chopchop: wireless/attacks/wep/04-chopchop.md
           - 5-fragment: wireless/attacks/wep/05-fragment.md
-          - 6-caffelatte: wireless/attacks/wep/06-caffelatte.md
           - 9-test: wireless/attacks/wep/09-test.md
         - wpa:
           - aircrack-ng: wireless/attacks/wpa/aircrack-ng.md
+          - airolib-ng: wireless/attacks/wpa/airolib-ng.md
           - cowpatty: wireless/attacks/wpa/cowpatty.md
           - crunch: wireless/attacks/wpa/crunch.md
+          - hashcat: wireless/attacks/wpa/hashcat.md
           - john-the-ripper: wireless/attacks/wpa/john-the-ripper.md
           - pyrit: wireless/attacks/wpa/pyrit.md
       - software:
-        - airmon-ng: wireless/software/airmon-ng.md
-        - airodump-ng: wireless/software/airodump-ng.md
-        - aireplay-ng: wireless/software/aireplay-ng.md
         - aircrack-ng: wireless/software/aircrack-ng.md
         - airdecap-ng: wireless/software/airdecap-ng.md
+        - aireplay-ng: wireless/software/aireplay-ng.md
+        - airmon-ng: wireless/software/airmon-ng.md
+        - airodump-ng: wireless/software/airodump-ng.md
+        - airolib-ng: wireless/software/airolib-ng.md
         - if-ip-iw: wireless/software/if-ip-iw.md
+        - scp-ssh: wireless/software/scp-ssh.md
       - hardware: wireless/hardware/hardware.md
       - hidden: wireless/attacks/hidden.md
       - ska: wireless/attacks/ska.md

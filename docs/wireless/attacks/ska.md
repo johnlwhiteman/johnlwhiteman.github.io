@@ -1,4 +1,4 @@
-# Shared Key Authentication
+# Shared Key Authentication (SKA)
 
 How to tell if AP is using `Shared Key Authentication`.
 
