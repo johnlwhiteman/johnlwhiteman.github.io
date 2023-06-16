@@ -25,7 +25,6 @@ nav:
     - wireless:
       - playbook: wireless/playbook.md
       - setup: wireless/setup.md
-      - teardown: wireless/teardown.md
       - attacks:
         - wep:
           - 0-deauth: wireless/attacks/wep/00-deauth.md
@@ -44,6 +43,11 @@ nav:
           - hashcat: wireless/attacks/wpa/hashcat.md
           - john-the-ripper: wireless/attacks/wpa/john-the-ripper.md
           - pyrit: wireless/attacks/wpa/pyrit.md
+        - wps:
+          - aircrack-ng: wireless/attacks/wps/wps.md
+        - hidden ap: wireless/attacks/hidden-ap.md
+        - rogue ap: wireless/attacks/rogue-ap.md
+        - ska: wireless/attacks/ska.md
       - software:
         - aircrack-ng: wireless/software/aircrack-ng.md
         - airdecap-ng: wireless/software/airdecap-ng.md
@@ -54,8 +58,7 @@ nav:
         - if-ip-iw: wireless/software/if-ip-iw.md
         - scp-ssh: wireless/software/scp-ssh.md
       - hardware: wireless/hardware/hardware.md
-      - hidden: wireless/attacks/hidden.md
-      - ska: wireless/attacks/ska.md
+      - teardown: wireless/teardown.md
     - doctools:
       - charts: doctools/charts/charts.md
       - kroki: doctools/kroki/kroki.md
