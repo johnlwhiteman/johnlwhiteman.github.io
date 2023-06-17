@@ -40,6 +40,7 @@ nav:
           - airolib-ng: wireless/attacks/wpa/airolib-ng.md
           - cowpatty: wireless/attacks/wpa/cowpatty.md
           - crunch: wireless/attacks/wpa/crunch.md
+          - enterprise: wireless/attacks/wpa/enterprise.md
           - hashcat: wireless/attacks/wpa/hashcat.md
           - john-the-ripper: wireless/attacks/wpa/john-the-ripper.md
           - pyrit: wireless/attacks/wpa/pyrit.md

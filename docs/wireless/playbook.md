@@ -26,6 +26,12 @@
 
 ## WPA/2
 
+### MGT
+
+* [Enterprise](./attacks/wpa/enterprise.md)
+
+### PSK
+
 * [Deauthentication Attack ... then](./attacks/wep/00-deauth.md)
     * [Aircrack-ng](./attacks/wpa/aircrack-ng.md)
     * [Airolib-ng](./attacks/wpa/airolib-ng.md)

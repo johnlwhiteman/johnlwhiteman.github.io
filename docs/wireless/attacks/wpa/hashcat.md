@@ -34,7 +34,7 @@ hashcat -I
 hashcat --help
 
 # Do some benchmarking -- careful here
-hashcat -b -m 2500
+hashcat -b -m 22000
 
 # Install utilities (usually already on Kali)
 sudo apt-get install hashcat-utils -y
@@ -42,6 +42,8 @@ sudo apt-get install hcxpcapngtool -y
 
 # Convert PCAP to hash format understood by hashcat
 sudo hcxpcapngtool -o hash.hc22000 -E $WORDLIST $PCAP
+
+# Cat cracks hashes
 hashcat -m 22000 hash.hc22000 $WORDLIST
 
 # Computer starts screaming ...
@@ -102,7 +104,6 @@ Hardware.Mon.#1..: Util: 26%
 Started: Sat Jun 17 01:36:07 2023
 Stopped: Sat Jun 17 01:36:31 2023
 ```
-
 
 ## References
 
