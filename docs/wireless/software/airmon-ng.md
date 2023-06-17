@@ -15,9 +15,15 @@ sudo airmon-ng check
 
 # Kill the programs that could interfere with aircrack tools
 sudo airmon-ng check kill
+# To regain later
+sudo service NetworkManager start
 
 # Start interface in monitor mode
 sudo airmon-ng start $ADAPTER
+# OR
+ifconfig mon0 down
+ifconfig mon0 mode managed
+ifconfig mon0 up
 
 # Start interface in monitor mode and channel is set
 sudo airmon-ng start $ADAPTER $CHANNEL

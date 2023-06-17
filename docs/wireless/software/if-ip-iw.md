@@ -5,6 +5,42 @@ This page contains a collection of networking commands. Try to avoid using `iwco
 ## IF/IP/IW Commands
 
 ```bash
+
+# iwlist
+sudo iwlist wlan0 frequency
+
+# Info about wireless devices
+sudo iw list
+
+# Grab the SSIDs
+sudo iw dev wlan0 scan | grep SSID
+
+# Grab channel number
+sudo iw dev wlan0 scan | egrep "DS Parameter set|SSID:"
+
+# Put in monitor mode
+sudo iw dev wlan0 interface add wlan0mon type monitor
+
+# Set link to up
+sudo ip link set wlan0mon up
+
+# Get info
+sudo iw dev wlan0mon info
+
+# Capture some frames
+sudo tcpdump -i wlan0mon
+
+# Remove (DON'T)
+sudo iw dev wlan0mon interface del
+
+# Get regulatory stuff
+sudo iw reg get
+```
+
+
+
+
+```bash
 # Find connect wireless adapters
 ifconfig
 ip a

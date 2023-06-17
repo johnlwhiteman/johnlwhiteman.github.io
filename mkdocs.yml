@@ -61,6 +61,8 @@ nav:
         - scp-ssh: wireless/software/scp-ssh.md
         - bettercap: wireless/software/bettercap.md
         - kismet: wireless/software/kismet.md
+        - lynx: wireless/software/lynx.md
+        - wpa-supplicant: wireless/software/wpa-supplicant.md
       - hardware: wireless/hardware/hardware.md
       - teardown: wireless/teardown.md
     - doctools:
