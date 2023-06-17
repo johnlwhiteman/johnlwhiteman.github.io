@@ -4,7 +4,10 @@ How to tell if AP is using `Shared Key Authentication`.
 
 ```bash
 [TERMINAL ONE]
+# Set interface to monitor mode
 sudo airmon-ng start $INTERFACE $CHANNEL
+
+# Start monitoring to collect data
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 [TERMINAL TWO]

@@ -27,6 +27,11 @@ iwlist wlan0 scan | grep SSID
 sudo iw dev wlan0 scan | egrep "DS\ Parameter\ set|SSID"
 iwlist wlan0 scanning | egrep "ESSID|Channel"
 
+# Set AP to monitor mode old school way ... airmon-ng does not work
+sudo ip link set wlan0 down
+sudo iw wlan0 set monitor control
+sudo ip link set wlan0 up
+
 # Connect to an open network by frequency
 iw wlan0 connect wifu 2432
 iwconfig wlan0 essid wifu freq 2432M

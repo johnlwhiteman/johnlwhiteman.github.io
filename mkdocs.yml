@@ -45,6 +45,7 @@ nav:
           - pyrit: wireless/attacks/wpa/pyrit.md
         - wps:
           - aircrack-ng: wireless/attacks/wps/wps.md
+        - captive portal: wireless/attacks/captive-portal.md
         - hidden ap: wireless/attacks/hidden-ap.md
         - rogue ap: wireless/attacks/rogue-ap.md
         - ska: wireless/attacks/ska.md
@@ -57,6 +58,8 @@ nav:
         - airolib-ng: wireless/software/airolib-ng.md
         - if-ip-iw: wireless/software/if-ip-iw.md
         - scp-ssh: wireless/software/scp-ssh.md
+        - bettercap: wireless/software/bettercap.md
+        - kismet: wireless/software/kismet.md
       - hardware: wireless/hardware/hardware.md
       - teardown: wireless/teardown.md
     - doctools:

@@ -13,7 +13,7 @@ This attack allows you to choose a specific packet for replaying (injecting). Th
 # Set interface to monitor mode
 sudo airmon-ng start $ADAPTER $CHANNEL
 
-# Start monitoring - make terminal large enough to see everything
+# Start monitoring to collect data
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]

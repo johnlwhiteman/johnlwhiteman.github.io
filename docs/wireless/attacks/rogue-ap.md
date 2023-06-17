@@ -9,8 +9,8 @@ Create an AP with DEVICE.
 Demonstrate how to decloak a hidden AP's SSID
 
 * Run [setup](../setup.md) first
-* Two terminals are needed
-* One client needs to be associated
+* Three terminals are needed
+* One client needs to be associated with AP
 * Need two ADAPTERS - connect both at the start
     * First to be the rogue AP
     * Second to be the run deauth attack against first
@@ -54,7 +54,10 @@ sudo hostapd-mana hostapd.conf
 
 ```bash
 # [Terminal Two]
+# Set interface to monitor mode
 sudo airmon-ng start $INTERFACE2 1
+
+# Start monitoring to collect data
 sudo airodump-ng -c 1 --bssid $INTERFACEMAC -w $TAG $INTERFACE2
 ```
 ![rogue dump](../images/rogue-ap-dump.png)
@@ -80,6 +83,7 @@ aircrack-ng -0 -e rogue -w $WORDLIST $PCAP
 ![rogue cracked](../images/rogue-ap-cracked.png)
 
 ## References
+
 * [hostapd](https://w1.fi/hostapd/)
 * [hostapd-mana](https://github.com/sensepost/hostapd-mana/)
 * [hostapd-mana config](https://github.com/sensepost/hostapd-mana/blob/master/hostapd/hostapd.conf)

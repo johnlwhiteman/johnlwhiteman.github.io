@@ -20,7 +20,7 @@ Of course, this attack is totally useless if there are no associated wireless cl
 # Set interface to monitor mode
 sudo airmon-ng start $ADAPTER $CHANNEL
 
-# Start monitoring - make terminal large enough to see everything
+# Start monitoring to collect data
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG $INTERFACE
 
 # [Terminal Two]

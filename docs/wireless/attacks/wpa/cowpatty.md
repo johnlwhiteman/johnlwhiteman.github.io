@@ -21,7 +21,7 @@ sudo apt-get install cowpatty -y
 # Set interface to monitor mode
 sudo airmon-ng start $INTERFACE
 
-# Start monitoring - make terminal large enough to see everything
+# Start monitoring to collect data
 sudo airodump-ng -c $CHANNEL --bssid $BSSID -w $TAG --output-format pcap $INTERFACE
 
 # [Terminal Two]
